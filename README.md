@@ -1,1 +1,1 @@
-# DevelopCapstone
+2020 WD3J 7조 캡스톤디자인 프로젝트
