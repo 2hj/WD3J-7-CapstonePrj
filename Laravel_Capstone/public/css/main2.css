@@ -1,0 +1,59 @@
+body {
+    margin: 10px auto;
+    width: 1200px;
+    text-align: center;
+}
+
+header, nav {
+    text-align: center;
+    margin: 35px 0;
+}
+
+
+#top_nav {
+    margin: 20px 0;
+}
+
+.top_bar {
+    display: inline-block;
+    width: 110px;
+    height: 30px;
+    font-size: 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    vertical-align:middle;
+    font-size: 14px;
+}
+
+.top_list {
+    color: black;
+    text-decoration: none;
+}
+
+.top_bar:hover{
+    text-decoration: underline;
+}
+
+#header_logo {
+    cursor: pointer;
+    width: 15%;
+}
+
+#main_logo {
+    width:50%;
+    position:absolute;
+    top:50px;
+    left:50px;
+}
+
+#main_text {
+    position: absolute;
+    top: 250px;
+    left: 150px;
+}
+
+#background {
+    position: relative;
+    text-align: center;
+    margin: 50px auto;
+}
