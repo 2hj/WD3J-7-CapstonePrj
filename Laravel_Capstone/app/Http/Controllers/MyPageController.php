@@ -7,11 +7,18 @@ use Illuminate\Http\Request;
 class MyPageController extends Controller
 {
     public function index(){
-      return view('mypages.mypage');
+      $history = \App\PostureHistory::get();
+
+      return view('mypages2.profile', ['data'=>$history]);
     }
 
-    public function toProfile(){
-      return view('mypages.profile');
+    public function toStats(){
+      $history = \App\PostureHistory::get();
+      return view('mypages2.stats.stats', ['data'=>$history]);
+    }
+
+    public function toStretchInfo(){
+      return view('mypages2.stretch_info.stretch_info');
     }
 
     public function toMyChallenge(Request $request){
@@ -20,7 +27,7 @@ class MyPageController extends Controller
       // $user_id = $join->user_id;
       $user = \App\User::where('id','=', $uid)->first();
 
-      return view('mypages.challenge_history' ,[
+      return view('mypages2.my_challenge.my_challenge' ,[
         'join'=>$join,
         'user' => $user,
       ]);

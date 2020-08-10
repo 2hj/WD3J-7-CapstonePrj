@@ -78,7 +78,8 @@ Route::resource('qna/answer', 'AnswersController');
 
 
 Route::get('mypage', 'MyPageController@index');
-Route::get('mypage/profile', 'MyPageController@toProfile');
+Route::get('mypage/stats', 'MyPageController@toStats');
+Route::get('mypage/stretchinfo', 'MyPageController@toStretchInfo');
 Route::get('mypage/mychallenge/{user_id}', 'MyPageController@toMyChallenge');
 Route::get('mypage/orderhis/{buy_user_id}', 'MyPageController@toOrderHistory');
 Route::get('mypage/orderinfo/{order_id}', 'MyPageController@showOrderInfo');

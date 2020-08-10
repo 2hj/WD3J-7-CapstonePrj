@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12" style="margin:15px 0 ;">
-          <h4 style="font-weight:bold;"># 2020-07-06 월</h4>
+          <h4 id="today-date" style="font-weight:bold;"></h4>
         </div>
         <div class="col-3 top-div-box-1">
             <div class="card border-success mb-3" style="max-width: 18rem;">
@@ -94,6 +94,25 @@
 </div>
 
 <script type="text/javascript">
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth()+1; //January is 0!
+    var yyyy = today.getFullYear();
+
+    if(dd<10) {
+        dd='0'+dd
+    } 
+
+    if(mm<10) {
+        mm='0'+mm
+    } 
+
+    today = mm+'/'+dd+'/'+yyyy;
+    // document.write(today);
+
+    document.getElementById("today-date").innerHTML(today);
+
+
     var msg = <?php echo $msg ?>;
     console.log(msg);
 

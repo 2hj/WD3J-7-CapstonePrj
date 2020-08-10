@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="stylesheet" href="/css/main2.css">
+    <!-- <link rel="stylesheet" href="/css/main2.css"> -->
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="/js/header.js"></script>
     <title>{{ config('app.name', 'Laravel') }}</title>
