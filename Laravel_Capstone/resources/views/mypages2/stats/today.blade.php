@@ -1,56 +1,61 @@
+
 <div class="container">
     <div class="row">
-        <div class="col-md-12" style="margin:15px 0 ;">
-          <h4 id="today-date" style="font-weight:bold;"></h4>
+        <div class="col-md-12 mypage-title">
+          <h4 class="mypage-body-title" id="today-date"></h4>
         </div>
         <div class="col-3 top-div-box-1">
-            <div class="card border-success mb-3" style="max-width: 18rem;">
-                <div class="card-header">今日の着席時間</div>
-                <div class="card-body text-success">
-                    <h5 class="card-title">6時間 40分</h5>
+            <div class="stat-card">
+                <div class="card-title">今日の着席時間</div>
+                <div class="card-body">
+                    <img src="\img\ui\웨이스탠드\소스\마이페이지\자세이력\착석시간 아이콘.png" alt="">
+                    <h3>6時間 40分</h3>
                 </div>
             </div>
         </div>
 
         <div class="col-3 top-div-box-2">
-            <div class="card border-success mb-3" style="max-width: 18rem;">
-                <div class="card-header">正しい姿勢の時間</div>
-                <div class="card-body text-success">
-                    <h5 class="card-title">2時間 15分</h5>
+            <div class="stat-card">
+                <div class="card-title">正しい姿勢の時間</div>
+                <div class="card-body">
+                    <img src="\img\ui\웨이스탠드\소스\마이페이지\자세이력\바른자세 아이콘.png" alt="">
+                    <h3>2時間 15分</h3>
                 </div>
             </div>
         </div>
 
         <div class="col-3 top-div-box-3">
-            <div class="card border-success mb-3" style="max-width: 18rem;">
-                <div class="card-header">今日の悪い姿勢</div>
-                <div class="card-body text-success">
-                    <h5 class="card-title">左足を組んだ姿勢</h5>
+            <div class="stat-card">
+                <div class="card-title">今日の悪い姿勢</div>
+                <div class="card-body">
+                    <img src="\img\ui\웨이스탠드\소스\마이페이지\자세이력\자세 아이콘.png" alt="">
+                    <h3>左足を組んだ姿勢</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-3 top-div-box-3">
+            <div class="stat-card">
+                <div class="card-title">一番長く座っていた時間</div>
+                <div class="card-body">
+                    <img src="\img\ui\웨이스탠드\소스\마이페이지\자세이력\착석시간 아이콘.png" alt="">
+                    <h3>1時間 50分</h3>
+                    <p>立ち上がってストレッチをしてください!</p>
                 </div>
             </div>
         </div>
 
 
         
-        <div class="col-9 main-div-box">
+        <div class="col-12 main-div-box stat-main-linechart">
             {{--{!! json_encode($data) !!}--}}
             <?php $msg = $data; ?>
-            <h2>今日の姿勢変化</h2>
+            <h4 class="mypage-body-title" >今日の姿勢変化</h4>
             <canvas id="lineChart"></canvas>
         </div>
 
-        <div class="col-3 right-banner-box">
-            <div class="card border-success mb-3" style="max-width: 18rem;">
-                <div class="card-header">一番長く座っていた時間</div>
-                <div class="card-body text-success">
-                    <h5 class="card-title">1時間 50分</h5>
-                    <p class="card-text">立ち上がってストレッチをしてください!</p>
-                </div>
-            </div>
-        </div>
-
         <div class="col-6 main-div-box" style="margin-top:30px;">
-            <div class="card">
+            <div class="card label-chart">
                 <div class="card-body">
                     <h5 class="card-title">今日はどんな姿勢で座ったか?</h5>
                     <canvas id="labelChart1"></canvas>
@@ -59,7 +64,7 @@
         </div>
 
         <div class="col-6 main-div-box" style="margin-top:30px;">
-            <div class="card">
+            <div class="card label-chart">
                 <div class="card-body">
                     <h5 class="card-title">正しい姿勢 / 悪い姿勢 -　比率</h5>
                     <canvas id="labelChart2"></canvas>
@@ -67,10 +72,10 @@
             </div> 
         </div>
 
-        <div class="col-9 main-div-box" style="margin-top:30px;">
-            <h2>時間による姿勢変化</h2>
+        <div class="col-12 main-div-box stat-main-linechart">
+            <h4 class="mypage-body-title" >時間による姿勢変化</h4>
             <div class="dropdown show">
-                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <a style="background-color: #58f1b0;" class="btn btn-secondary dropdown-toggle select-btn" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                     姿勢を選択
                 </a>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -91,6 +96,7 @@
     </div>
 </div>
 
+
 <script type="text/javascript">
     var today = new Date();
     var dd = today.getDate();
@@ -104,6 +110,8 @@
     if(mm<10) {
         mm='0'+mm
     } 
+
+// Date.getDay() -> 일요일(0) ~ 토요일(6)
 
     today = yyyy+'年 '+mm+'月 '+dd+'日';
     // document.write(today);
@@ -137,7 +145,7 @@
         labels: ["1", "2", "3", "4", "5", "6", "7"],
         datasets: [
             {
-            label: "바른자세 추이",
+            label: "正しい姿勢の変化",
             data: [65, 59, 70, 81, 56, 55, 40],
             backgroundColor: [
                 'rgba(0, 227, 106, .2)',
@@ -148,7 +156,7 @@
             borderWidth: 2
             },
             {
-            label: "나쁜자세 추이",
+            label: "悪い姿勢の変化",
             data: [35, 41, 30, 19, 44, 45, 60],
             backgroundColor: [
                 'rgba(255, 59, 59, .2)',
@@ -172,13 +180,13 @@
         type: 'pie',
         data: {
         labels: [
-            "바른자세", 
-            "왼쪽다리 꼰 자세", 
-            "오른쪽다리 꼰 자세", 
-            "뒤로 기댄 자세", 
-            "앞으로 구부정한 자세", 
-            "왼쪽으로 구부정한 자세", 
-            "오른쪽으로 구부정한 자세"
+            "正しい姿勢", 
+            "左足を組んだ姿勢", 
+            "右足を組んだ姿勢", 
+            "背もたれに寄りかかった姿勢", 
+            "前に曲がった姿勢", 
+            "左に曲がった姿勢", 
+            "右に曲がった姿勢"
         ],
         datasets: [{
             data: [210, 130, 120, 160, 120, 30, 30],
@@ -241,7 +249,7 @@
         plugins: [ChartDataLabels],
         type: 'pie',
         data: {
-          labels: ["바른자세", "나쁜자세"],
+          labels: ["正しい姿勢", "悪し姿勢"],
           datasets: [{
             data: [34, 66],
             backgroundColor: [colors.blue, colors.red],
@@ -290,7 +298,7 @@
         labels: ["1", "2", "3", "4", "5", "6", "7"],
         datasets: [
             {
-            label: "바른자세 추이",
+            label: "正しい姿勢の変化",
             data: [65, 59, 80, 81, 56, 55, 40],
             backgroundColor: [
                 'rgba(14, 237, 115, .2)',
@@ -311,10 +319,14 @@
     // 정자세 추이
     var myChart = new Chart(ctxL_myChart, myChart_data);
 
+    $('.select-btn').on('click', function(){
+      console.log('자세 선택 버튼');
+    });
+
     //자세별 추이 보기
     $('#good').click(function(e){
         console.log('cross left leg click');
-        myChart_data.data.datasets[0].label = '바른 자세 추이';
+        myChart_data.data.datasets[0].label = '正しい姿勢の変化';
         myChart_data.data.datasets[0].data = [65, 59, 80, 81, 56, 55, 40];
         myChart_data.data.datasets[0].backgroundColor = ['rgba(14, 237, 115, .2)'];
         myChart_data.data.datasets[0].borderColor = ['rgba(14, 237, 115, .7)'];
@@ -323,7 +335,7 @@
 
     $('#cross-left-leg').click(function(e){
         console.log('cross left leg click');
-        myChart_data.data.datasets[0].label = '왼쪽다리 꼰 자세 추이';
+        myChart_data.data.datasets[0].label = '左足を組んだ姿勢の変化';
         myChart_data.data.datasets[0].data = [20, 10, 0, 40, 10, 50, 20];
         myChart_data.data.datasets[0].backgroundColor = ['rgba(255, 65, 51, .2)'];
         myChart_data.data.datasets[0].borderColor = ['rgba(255, 65, 51, .7)'];
@@ -333,7 +345,7 @@
     $('#cross-right-leg').click(function(e){
         console.log('cross left leg click');
         myChart_data.data.datasets[0].data = [10, 40, 20, 60, 40, 25, 35];
-        myChart_data.data.datasets[0].label = '오른쪽다리 꼰 자세 추이';
+        myChart_data.data.datasets[0].label = '右足を組んだ姿勢の変化';
         myChart_data.data.datasets[0].backgroundColor = ['rgba(255, 168, 64, .2)'];
         myChart_data.data.datasets[0].borderColor = ['rgba(255, 168, 64, .7)'];
         myChart.update();
@@ -341,7 +353,7 @@
     
     $('#edge-lean').click(function(e){
         console.log('cross left leg click');
-        myChart_data.data.datasets[0].label = '뒤로 기댄 자세 추이';
+        myChart_data.data.datasets[0].label = '背もたれに寄りかかった姿勢の変化';
         myChart_data.data.datasets[0].data = [10, 20, 45, 35, 25, 55, 40];
         myChart_data.data.datasets[0].backgroundColor = ['rgba(255, 128, 144, .2)'];
         myChart_data.data.datasets[0].borderColor = ['rgba(255, 128, 144, .7)'];
@@ -350,7 +362,7 @@
    
     $('#lean-toward').click(function(e){
         console.log('cross left leg click');
-        myChart_data.data.datasets[0].label = '앞으로 구부정한 자세 추이';
+        myChart_data.data.datasets[0].label = '前に曲がった姿勢の変化';
         myChart_data.data.datasets[0].data = [5, 25, 15, 45, 60, 25, 30];
         myChart_data.data.datasets[0].backgroundColor = ['rgba(139, 111, 237, .2)'];
         myChart_data.data.datasets[0].borderColor = ['rgba(139, 111, 237, .7)'];
@@ -359,7 +371,7 @@
   
     $('#lean-left').click(function(e){
         console.log('cross left leg click');
-        myChart_data.data.datasets[0].label = '왼쪽으로 구부정한 자세 추이';
+        myChart_data.data.datasets[0].label = '左に曲がった姿勢の変化';
         myChart_data.data.datasets[0].data = [5, 35, 60, 50, 20, 45, 65];
         myChart_data.data.datasets[0].backgroundColor = ['rgba(47, 108, 150, .2)'];
         myChart_data.data.datasets[0].borderColor = ['rgba(47, 108, 150, .7)'];
@@ -368,7 +380,7 @@
    
     $('#lean-right').click(function(e){
         console.log('cross left leg click');
-        myChart_data.data.datasets[0].label = '오른쪽으로 구부정한 자세 추이';
+        myChart_data.data.datasets[0].label = '右に曲がった姿勢の変化';
         myChart_data.data.datasets[0].data = [35, 20, 5, 50, 65, 35, 20];
         myChart_data.data.datasets[0].backgroundColor = ['rgba(122, 122, 122, .2)'];
         myChart_data.data.datasets[0].borderColor = ['rgba(122, 122, 122, .7)'];
@@ -376,5 +388,3 @@
     });
     
 </script>
-<link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css" >
-<script src="{{ asset('js/app.js') }}"></script>

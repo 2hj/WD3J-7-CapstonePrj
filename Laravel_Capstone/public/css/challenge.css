@@ -1,92 +1,79 @@
-.challenge_box {
-    margin: 30px auto;
-    width: 800px;
-    border: 1px solid gray;
-    border-radius: 10px;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Noto+Sans+KR:wght@900&display=swap');
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Noto Sans JP', sans-serif;
 }
-
-#order_index {
-    text-align: left;
-    margin: 50px 200px;
-    font-size: 20px;
+.challenge-list-cont{
+  position: absolute;
+  top:0;
 }
-
-.title {
-    padding: 20px;
-    cursor: pointer;
+.challenge-carousel-inner{
+  height:1000px;
 }
-
-#back_cha , #add_chal {
-    margin: 30px;
+.challenge-carousel-text{
+  top: 35%;
+}   
+.challenge-carousel-text>h1{
+  font-weight: 900;
+  font-size: 48px;
 }
-
-.entry_btn, .show_chal, .edit_chal, .del_chal, #back_chal {
-    width: 150px;
-    height: 40px;
-    background-color: #80ffb9;
-    font-size: 16px;
-    border: none;
+.challenge-carousel-text>p{
+  font-size: 18px;
 }
-
-#challenge_list, #add_chal {
-    width: 300px;
-    height: 50px;
-    margin: 30px;
-    background-color: #80ffb9;
-    font-size: 18px;
-    border: none;
+#col-card{
+  top:250px;
+  height: 330px;
+  position: absolute;
+  width:100%;
+  
 }
-
-.entry_challenge {
-    margin: 10px;
+.col-4.challenge-col{
+  display: inline-block;
+  width: 350px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  margin:0 10px;
+  padding: 0;
 }
-
-#challenge_title, #default_entry_fee, #challenge_information {
-    text-align: left;
-    width: 800px;
-    padding: 30px;
-    font-size: 20px;
-    margin: 0 auto;
-    border: 1px solid gray;
-    border-radius: 10px;
+.challenge-card{
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #585858;
+  text-align: left;
 }
-
-#challenge_information {
-    resize: none;
+.card-body{
+  height: 274px;
+  vertical-align: middle;
+  display: inline-block;
 }
-
-#save_chal, #edit_chal {
-    width: 700px;
-    height: 60px;
-    background-color: #80ffb9;
-    font-size: 20px;
-    border: 0;
-    margin: 50px;
+.card-body>h4{
+  padding: 10px 20px;
 }
-
-.infor  {
-    font-size: 15px;
+.card-body>img{
+  padding: 10px 20px;
 }
-
-#show_chal {
-    margin: 30px;
+.card-body>p{
+  padding: 10px 20px;
 }
-
-#title, #fee, #info {
-    width: 720px;
-    margin: 30px auto;
-    padding: 40px;
-    font-size: 18px;
-    border: 1px solid gray;
-    border-radius: 10px;
+.card-body>h5{
+  margin: 10px 0;
 }
-
-#chal_bar {
-    margin: 50px auto;
-    text-align: center;
+#join-info{
+  padding-left: 40px;
+  padding-top: 20px;
 }
+#join-fee{
+  margin: 20px 0;
+}
+.btn.join-modal{
+  color: white;
+  font-family:'Noto Sans JP', sans-serif;
+  font-size: 15px;
+  background-color: #00ee99;
+  border-radius: 7px 7px 7px;
+  box-shadow: 0 0 20px #d6fff1;
+  margin-top: 46px;
+  margin-left: 40px;
 
-.tag{
-  width: 100%;
-  text-align: center;
+}
+.btn.join-modal:hover{
+  background-color: #5dffc6;
 }

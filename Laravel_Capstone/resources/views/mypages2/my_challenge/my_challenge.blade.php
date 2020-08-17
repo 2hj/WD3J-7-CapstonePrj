@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="/css/my_challenge.css">
+
 <div>
     <input type="hidden" id="user_id" value="{{ $join->user_id }}">
     <input type="hidden" id="join_id" value="{{ $join->id }}">
@@ -7,60 +9,64 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12">
-      <h4 style="font-weight:bold; margin-bottom: 20px;"># 今参加している - 正しい姿勢チャレンジ</h4>
+    <div class="col-md-12 mypage-title">
+          <h5 class="mypage-body-title">今参加している - 正しい姿勢チャレンジ</h5>
     </div>
 
-    <div class="col-md-3" style="display: inline-block;">
-      <div class="card border-info mb-3" style="max-width: 16rem;height: 200px;border: 0;box-shadow: 0px 0px 17px #d5dfe8;margin:0 auto;box-shadow: 0px 0px 20px #d5dfe8;">
-        <div class="card-header" style="text-align: center; font-weight: bold;">参加日</div>
-        <div class="card-body text-info" style="text-align: center;">
-          <h5 class="card-title" style="margin-top: 20px;">{{ $join->join_date }} ~</h5>
-          <h5 class="card-title" id="end_join" ></h5>
+    <div class="col-3 top-div-box-1">
+        <div class="my-challenge-card">
+            <div class="card-title">チャレンジ機関</div>
+            <div class="card-body">
+              <h4>{{ $join->join_date }} ~</h4>
+              <h4 id="end_join" ></h4>
+            </div>
         </div>
-      </div>
     </div>
 
-    <div class="col-md-3" style="display: inline-block;">
-      <div class="card border-info mb-3" style="max-width: 16rem;height: 200px;border: 0;box-shadow: 0px 0px 17px #d5dfe8;margin:0 auto;box-shadow: 0px 0px 20px #d5dfe8;">
-        <div class="card-header" style="text-align: center; font-weight: bold;">チャレンジ期間</div>
-        <div class="card-body text-info">
-          <h5 class="card-title">{{ $join->join_term }}日</h5>
-          <div class="progress" style="margin-bottom: 20px;">
-            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
-          </div>
-          <h4 style="text-align: center;">現在　一日目</h3>
+    <div class="col-3 top-div-box-1">
+        <div class="my-challenge-card">
+            <div class="card-title">チャレンジ期間</div>
+            <div class="card-body">
+              <h4>{{ $join->join_term }}日</h4>
+              <div class="progress" style="margin-bottom: 20px;">
+                <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+              </div>
+              <h4 style="text-align: center;">現在　一日目</h4>
+            </div>
         </div>
-      </div>
     </div>
 
-    <div class="col-md-3" style="display: inline-block;">
-      <div class="card border-info mb-3" style="max-width: 16rem;height: 200px;border: 0;box-shadow: 0px 0px 17px #d5dfe8;margin:0 auto;box-shadow: 0px 0px 20px #d5dfe8;">
-        <div class="card-header"  style="text-align: center; font-weight: bold;">参加費</div>
-        <div class="card-body text-info">
-          @if($join->entry_fee == 0)
-          <h5 class="card-title" style="line-height: 110px;text-align: center;">無料で参加中</h5>
-          @else
-          <h5 class="card-title" style="line-height: 110px;text-align: center;">{{ $join->entry_fee }}円</h5>
-          @endif
+    <div class="col-3 top-div-box-1">
+        <div class="my-challenge-card">
+            <div class="card-title">参加費</div>
+            <div class="card-body">
+              @if($join->entry_fee == 0)
+              <h4>無料で参加中</h4>
+              @else
+              <h4>{{ $join->entry_fee }}円</h4>
+              @endif
+            </div>
         </div>
-      </div>
     </div>
 
-    <div class="col-md-3" style="display: inline-block;">
-      <div class="card border-info mb-3" style="max-width: 16rem;height: 200px;border: 0;box-shadow: 0px 0px 17px #d5dfe8;margin:0 auto;box-shadow: 0px 0px 20px #d5dfe8;">
-        <div class="card-header" style="text-align: center; font-weight: bold;">全体達成率</div>
-        <div class="card-body text-info">
-          <h3 style="display: inline-block;line-height: 110px;">20%</h3>
-          <div style="width: 110px;height: 110px;display: inline-block; float: right;">
-            <canvas id="doughnut-chart"></canvas>
-          </div>
+    <div class="col-3 top-div-box-1">
+        <div class="my-challenge-card">
+            <div class="card-title">全体達成率</div>
+            <div class="card-body">
+              <h4 style="float:left;">20%</h4>
+              <div style="width: 110px;height: 110px;display: inline-block; float: right;">
+                <canvas id="doughnut-chart"></canvas>
+              </div>
+            </div>
         </div>
-      </div>
     </div>
 
-      <div class="col-md-8" style="margin-top: 60px;">
-        <h5 style="font-weight:bold" id="today-date">今日 </h4>
+
+    <div class="col-md-12 mypage-title">
+      <h5 class="mypage-body-title" id="today-date" style="padding-top:50px;"></h5>
+    </div>
+
+      <div class="col-md-8" style="margin-top: 10px;">
         <div style="width: 650px;">
           <canvas id="bar-chart"></canvas>
         </div>
@@ -69,28 +75,28 @@
       <div class="col-md-4">
         <div class="row" style="margin-top: 50px;">
           <div class="col-md-12">
-            <div class="card border-primary mb-3" style="max-width: 18rem; height: 100px;">
-              <div class="card-header">昨日の着席時間</div>
-              <div class="card-body text-primary">
-                <h5 class="card-title">5時間 50分</h5>
+            <div class="my-challenge-card" style="margin: 5px 0; height: 100px;">
+              <div class="card-title-my-challenge-stat">昨日の着席時間</div>
+              <div class="card-body-my-challenge-stat">
+                <h4>5時間 50分</h4>
               </div>
             </div>
           </div>
 
           <div class="col-md-12">
-            <div class="card border-success mb-3" style="max-width: 18rem; height: 100px;">
-              <div class="card-header">昨日：正しい姿勢の時間</div>
-              <div class="card-body text-success">
-                <h5 class="card-title">1時間 20分</h5>
+            <div class="my-challenge-card" style="margin: 5px 0; height: 100px;">
+              <div class="card-title-my-challenge-stat">昨日：正しい姿勢の時間</div>
+              <div class="card-body-my-challenge-stat">
+                <h4>1時間 20分</h4>
               </div>
             </div>
           </div>
           
           <div class="col-md-12">
-            <div class="card border-danger mb-3" style="max-width: 18rem; height: 100px;">
-              <div class="card-header">今までの達成率</div>
-              <div class="card-body text-danger">
-                <h5 class="card-title">20%</h5>
+            <div class="my-challenge-card" style="margin: 5px 0; height: 100px;">
+              <div class="card-title-my-challenge-stat">今までの達成率</div>
+              <div class="card-body-my-challenge-stat">
+                <h4>20%</h4>
               </div>
             </div>
           </div>
@@ -203,7 +209,7 @@
 
         console.log(start_date, day, calDate(start_date, day, '+'));
 
-        $('#end_join').html('2020-07-14');
+        $('#end_join').html('2020-08-21');
         // $('#end_join').html(calDate(start_date, day, '+'));
 
 
@@ -235,7 +241,7 @@
 
         //-------------달성 진척 바 차트 --------------------------
         var bar_data = {
-          labels: ['07-06', '07-07', '07-09', '07-10', '07-11', '07-12', '07-13', '07-14'],
+          labels: ['08-14', '08-15', '08-16', '08-17', '08-18', '08-19', '08-20', '08-21'],
           datasets: [{
               backgroundColor: '#46BFBD',
               // barPercentage: 0.5,
@@ -259,7 +265,7 @@
                   max: 100, 
                   stepSize: 20,
                 }
-              }]
+              }],
           }
         };
 
@@ -275,10 +281,10 @@
         var myLineChart1 = new Chart(ctxL1, {
             type: 'line',
             data: {
-            labels: ['1(일차)', 2, 3, 4, 5, 6, 7, 8],
+            labels: ['1(日目)', 2, 3, 4, 5, 6, 7, 8],
             datasets: [
                 {
-                label: "일별 바른자세 달성율",
+                label: "日別正しい姿勢の比率",
                 data: [34, 0, 0, 0, 0, 0, 0, 0],
                 backgroundColor: [
                     'rgba(0, 227, 106, .2)',
@@ -296,4 +302,5 @@
         });
     });
 </script>
-<link rel="stylesheet" href="/css/joinChallenge.css">
+<link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css" >
+<script src="{{ asset('js/app.js') }}"></script>

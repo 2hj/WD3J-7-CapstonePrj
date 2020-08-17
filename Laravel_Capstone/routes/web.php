@@ -77,10 +77,18 @@ Route::resource('qna', 'QuestionsController');
 Route::resource('qna/answer', 'AnswersController');
 
 
-Route::get('mypage', 'MyPageController@index');
-Route::get('mypage/stats', 'MyPageController@toStats');
-Route::get('mypage/stretchinfo', 'MyPageController@toStretchInfo');
-Route::get('mypage/mychallenge/{user_id}', 'MyPageController@toMyChallenge');
+Route::get('mypage', 'MyPageController@index'); // 마이페이지 초기화면
+
+Route::get('mypage/stats', 'MyPageController@toStats'); // 마이페이지 - 자세이력통계
+Route::get('mypage/stats/today', 'MyPageController@toTodayStat'); // 마이페이지 - 자세이력통계 - 일별
+Route::get('mypage/stats/week', 'MyPageController@toWeekStat'); // 마이페이지 - 자세이력통계 - 주별
+Route::get('mypage/stats/month', 'MyPageController@toMonthStat'); // 마이페이지 - 자세이력통계 - 월별
+
+
+Route::get('mypage/stretchinfo', 'MyPageController@toStretchInfo'); // 마이페이지 - 스트레칭 정보
+
+Route::get('mypage/mychallenge/{user_id}', 'MyPageController@toMyChallenge'); // 마이페이지 - 챌린지 현황
+
 Route::get('mypage/orderhis/{buy_user_id}', 'MyPageController@toOrderHistory');
 Route::get('mypage/orderinfo/{order_id}', 'MyPageController@showOrderInfo');
 Route::delete('mypage/order_delete/{order_id}', 'MyPageController@deleteOrder');

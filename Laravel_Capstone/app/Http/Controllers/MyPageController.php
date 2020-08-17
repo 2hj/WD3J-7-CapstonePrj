@@ -12,15 +12,41 @@ class MyPageController extends Controller
       return view('mypages2.profile', ['data'=>$history]);
     }
 
+
+    // -------자세이력-------
     public function toStats(){
       $history = \App\PostureHistory::get();
       return view('mypages2.stats.stats', ['data'=>$history]);
     }
 
+    public function toTodayStat(){
+      $history = \App\PostureHistory::get();
+
+      return view('mypages2.stats.today', ['data'=>$history]);
+    }
+
+    public function toWeekStat(){
+      $history = \App\PostureHistory::get();
+
+      return view('mypages2.stats.week', ['data'=>$history]);
+    }
+
+    public function toMonthStat(){
+      $history = \App\PostureHistory::get();
+
+      return view('mypages2.stats.month', ['data'=>$history]);
+    }
+
+
+    
+    // -------스트레칭 정보-------
     public function toStretchInfo(){
       return view('mypages2.stretch_info.stretch_info');
     }
 
+    
+    
+    // -------챌린지현황-------
     public function toMyChallenge(Request $request){
       $uid = $request->id;
       $join = \App\JoinChallenge::where('user_id', '=', $uid)->first();

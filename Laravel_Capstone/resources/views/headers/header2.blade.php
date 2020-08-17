@@ -139,6 +139,13 @@
             <li class="header-item">
               <a href="/mypage" class="nav-link">MyPage</a>
             </li>
+            <li class="header-item nav-item dropdown">
+              <a href="/challenges" class="nav-link dropdown-toggle"  href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Challenge</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="transform:translate3d(15px, 70px, 0px);">
+                <a class="dropdown-item" href="/challenges" style="font-size: 16px;">チャレンジリスト</a>
+                <a class="dropdown-item" href="/join_challenges" style="font-size: 16px;">参加リスト</a>
+              </div>
+            </li>
             <li class="header-item">
               <a href="/auth/logout" class="nav-link">ログアウト</a>
             </li>

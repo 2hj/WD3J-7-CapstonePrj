@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Noto+Sans+KR:wght@900&display=swap');
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Noto Sans JP', sans-serif;
+}
+.mypage-body-title{
+  color: #585858;
+  font-family: 'Noto Sans JP', sans-serif;
+  margin: 50px 0;
+}
+.keyword-card{
+  text-align: center;
+  font-family: 'Noto Sans JP', sans-serif;
+  height: 310px;
+  background-color: #f7f7f7;
+}
+.card-body{
+  height: 100%;
+}
+.keyword-img{
+  width: 170px;
+  padding: 10px;
+}
+.card-body>h4, p{
+  padding-top: 10px;
+}
+.my-stretch-col{
+  height: 310px;
+}
+
+.category-stretch-col{
+  height:370px;
+  padding:0!important;
+}
+
+#my-stretch-card1{
+  background-image: url('/img/ui/웨이스탠드/소스/마이페이지/스트레칭 정보/학생을 위한 스트레칭 사진.png');
+  text-align: center;
+  height: 100%;
+}
+#my-stretch-card2{
+  background-image: url('/img/ui/웨이스탠드/소스/마이페이지/스트레칭 정보/거북목 교정 스트레칭 사진.png');
+  text-align: center;
+  height: 100%;
+}
+#my-stretch-card3{
+  background-image: url('/img/ui/웨이스탠드/소스/마이페이지/스트레칭 정보/자세 교정 스트레칭 사진.png');
+  text-align: center;
+  height: 100%;
+}
+#category-stretch-card1{
+  background-image: url('/img/ui/웨이스탠드/소스/마이페이지/스트레칭 정보/직장인 스트레칭 사진.png');  
+  text-align: center;
+  height: 100%;
+}
+#category-stretch-card2{
+  background-image: url('/img/ui/웨이스탠드/소스/마이페이지/스트레칭 정보/회사에서 스트레칭 사진.png');  
+  text-align: center;
+  height: 100%;
+}
+#category-stretch-card3{
+  background-image: url('/img/ui/웨이스탠드/소스/마이페이지/스트레칭 정보/회사에서 스트레칭2 사진.png');  
+  text-align: center;
+  height: 100%;
+}
+#category-stretch-card4{
+  background-image: url('/img/ui/웨이스탠드/소스/마이페이지/스트레칭 정보/명상으로 스트레스 줄이기 사진.png');  
+  text-align: center;
+  height: 100%;
+}
+#category-stretch-card5{
+  background-image: url('/img/ui/웨이스탠드/소스/마이페이지/스트레칭 정보/퇴근 후 스트레칭 사진.png');  
+  text-align: center;
+  height: 100%;
+}
+#category-stretch-card6{
+  background-image: url('/img/ui/웨이스탠드/소스/마이페이지/스트레칭 정보/일하면서 스트레칭 하는법 사진.png');  
+  text-align: center;
+  height: 100%;
+}
+
+.my-stretch-card-body>h5{
+  color:white;
+  padding-top:30%;
+  padding-bottom:10px;
+}
+.category-stretch-card-body>h5{
+  color:white;
+  padding-top:30%;
+  padding-bottom:10px;
+}
+.btn.my-stretch-modal{
+  color: #00ee99;
+  font-family:'Noto Sans JP', sans-serif;
+  font-size: 15px;
+  background-color: white;
+  border-radius: 7px 7px 7px;
+  box-shadow: 0 0 100px white;
+}
+.btn.my-stretch-modal:hover{
+  color: #00a167;
+  text-decoration: none;
+}
+
+.btn.category-btn{
+  color: #00ee99;
+  font-family:'Noto Sans JP', sans-serif;
+  font-size: 12px;
+  background-color: white;
+  border-radius: 7px 7px 7px;
+  box-shadow: 5px 5px 10px #d8fff1;
+  margin: 0 5px;
+}
+.btn.category-btn:hover{
+  color: white;
+  background-color: #00ee99;
+  text-decoration: none;
+}
+

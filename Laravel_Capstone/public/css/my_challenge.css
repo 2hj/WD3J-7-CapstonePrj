@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Noto+Sans+KR:wght@900&display=swap');
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Noto Sans JP', sans-serif;
+}
+.mypage-body-title{
+  color: #585858;
+  font-family: 'Noto Sans JP', sans-serif;
+  margin: 50px 0;
+}
+.my-challenge-card{
+  text-align: center;
+  font-family: 'Noto Sans JP', sans-serif;
+  height: 250px;
+  background-color: #f7f7f7;
+}
+.card-title{
+  text-align: left;
+  color: #555555;
+  font-weight: 900;
+  padding: 20px 40px;
+}
+.card-body{
+  color: #888888;
+  line-height:250px;
+}
+.card-body>h4{
+  margin-top:10px;
+}
+.my-challenge-stat-card{
+  text-align: center;
+  font-family: 'Noto Sans JP', sans-serif;
+  height: 100px;
+  background-color: #f7f7f7;
+  margin: 5p 0;
+}
+.card-title-my-challenge-stat{
+  text-align: left;
+  color: #555555;
+  font-weight: 900;
+  padding: 10px 20px;
+}
+.card-body-my-challenge-stat{
+  color: #888888;
+}
+.card-body-my-challenge-stat>h4{
+  margin-top:10px;
+}
+#back_join{
+  color: #00ee99;
+  font-family:'Noto Sans JP', sans-serif;
+  font-size: 15px;
+  background-color: white;
+  border-radius: 7px 7px 7px;
+  box-shadow: 0 0 100px white;
+  margin: 30px 0 100px 30px;
+  border: 1px solid #00ee99;
+}
+#back_join:hover{
+  color: #00a167;
+  text-decoration: none;
+}

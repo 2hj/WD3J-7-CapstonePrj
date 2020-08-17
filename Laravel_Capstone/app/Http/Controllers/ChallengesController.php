@@ -25,11 +25,14 @@ class ChallengesController extends Controller
         ];
 
         $joinChallenges = \App\JoinChallenge::get();
+        $good_challenge = $challenges->where('id', 1)->first();
+        $stretch_challenge = $challenges->where('id', 2)->first();
         $challenge_1 = $joinChallenges->where('challenge_id', 1); //바른자세챌린지
         $challenge_2 = $joinChallenges->where('challenge_id', 2); //스트레칭 챌린지
 
-        return view('challenges.index', [
-            'challenges'=>$challenges,
+        return view('challenges.list_challenge', [
+            'good_challenge'=>$good_challenge,
+            'stretch_challenge'=>$stretch_challenge,
             'imgUrl' => $imgUrl,
             'challenge_1' => $challenge_1,
             'challenge_2' => $challenge_2,
@@ -44,9 +47,7 @@ class ChallengesController extends Controller
      */
     public function create()
     {
-        return view('challenges.create', [
-            'menu' => '챌린지 생성',
-        ]);
+        
     }
 
     /**

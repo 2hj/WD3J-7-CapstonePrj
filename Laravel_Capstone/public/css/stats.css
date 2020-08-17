@@ -1,37 +1,69 @@
-#main-left{
-    position: relative;
-    width: 600px;
-    margin: 10px;
-    background-color: aqua;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Noto+Sans+KR:wght@900&display=swap');
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Noto Sans JP', sans-serif;
 }
-  
-#left-top-info-banner{
-    margin: 10px;
-    height: 300px;
-    background-color: darkgoldenrod;
+#btn-group-stats{
+  margin: 30px 0 0 0;
+  border-radius: 7px;
 }
-  
-#left-main{
-    margin: 10px;
-    position: relative;
-    height: 500px;
-    background-color: fuchsia;
+#btn-group-stats>button{
+  background-color: #58f1b0;
+  border-color: white;
+  font-family: 'Noto Sans JP', sans-serif;
+
 }
-  
-#main-right{
-    margin: 10px;
-    width: 300px;
-    background-color: cornflowerblue;
+#btn-group-stats>button:hover{
+  background-color: #4fd89e;
 }
-  
-#right-top-select-box{
-    margin: 10px;
-    height: 400px;
-    background-color: red;
+
+/* .mypage-title{
+  margin: 30px 0;
+} */
+.mypage-body-title{
+  color: #585858;
+  font-family: 'Noto Sans JP', sans-serif;
+  letter-spacing: 1px;
+  margin: 30px 0;
 }
-  
-#right-info-banner{
-    margin: 10px;
-    height: 500px;
-    background-color: green;
+
+.stat-card{
+  text-align: center;
+  font-family: 'Noto Sans JP', sans-serif;
+  height: 270px;
+  background-color: #f7f7f7;
+}
+.card-title{
+  text-align: left;
+  color: #555555;
+  font-weight: 900;
+  padding: 20px 40px;
+}
+.card-body{
+  color: #888888;
+}
+.card-body>h3{
+  margin-top: 40px;
+}
+.card-body>p{
+  font-size: 11px;
+}
+
+.stat-main-linechart{
+  margin-top: 100px;
+}
+
+#lineChart, .label-chart{
+  background-color: #f7f7f7;
+  border: 0;
+}
+.select-btn{
+  background-color: #58f1b0;
+  border: 0;
+}
+.select-btn:hover{
+  background-color: #58f1b0;
+}
+
+.week-report, .month-report{
+  padding-bottom: 0;
 }

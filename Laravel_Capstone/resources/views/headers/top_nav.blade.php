@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-<link rel="stylesheet" href="/css/mypage_top.css">
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
@@ -45,6 +44,9 @@
   }
 
 </style>  
+<link rel="stylesheet" href="/css/mypage_top.css">
+<link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css" >
+<script src="{{ asset('js/app.js') }}"></script>
 <title>WaiStand</title>
 </head>
 <body>
@@ -70,6 +72,13 @@
             @if(Auth::user())
             <li class="header-item">
               <a href="/mypage" class="nav-link">MyPage</a>
+            </li>
+            <li class="header-item nav-item dropdown">
+              <a href="/challenges" class="nav-link dropdown-toggle"  href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Challenge</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="transform:translate3d(15px, 70px, 0px);">
+                <a class="dropdown-item" href="/challenges" style="font-size: 16px;">チャレンジリスト</a>
+                <a class="dropdown-item" href="/join_challenges" style="font-size: 16px;">参加リスト</a>
+              </div>
             </li>
             <li class="header-item">
               <a href="/auth/logout" class="nav-link">ログアウト</a>

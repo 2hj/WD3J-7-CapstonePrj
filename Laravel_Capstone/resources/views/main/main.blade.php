@@ -15,7 +15,7 @@
             <div class="carousel-caption d-none d-md-block" id="carousel-caption-1">
               <h1>Waist、 Stand。</h1>
               <p>IoT座布団を使って<br>正しい姿勢を作ってみてください。</p>
-              <button type="button" class="btn btn-link main-carousel-btn">詳細を見る</button>
+              <button type="button" class="btn btn-link main-carousel-btn" id="stats-btn">詳細を見る</button>
             </div>
           </div>
           <div class="carousel-item">
@@ -23,7 +23,7 @@
             <div class="carousel-caption d-none d-md-block" id="carousel-caption-2">
               <h1>MLで着席姿勢を分析</h1>
               <p>KNN分類アルゴリズムを使って<br>皆さんの姿勢をより正確に分析します。</p>
-              <button type="button" class="btn btn-link main-carousel-btn">私の姿勢を見る</button>
+              <button type="button" class="btn btn-link main-carousel-btn" id="stretch-info-btn">私の姿勢を見る</button>
             </div>
           </div>
           <div class="carousel-item">
@@ -31,7 +31,7 @@
             <div class="carousel-caption d-none d-md-block" id="carousel-caption-3">
               <h1>正しい姿勢チャレンジに<br>挑戦しましょう。</h1>
               <p>IoT座布団を使って<br>正しい姿勢を作ってみてください。</p>
-              <button type="button" class="btn btn-link main-carousel-btn">チャレンジ参加</button>
+              <button type="button" class="btn btn-link main-carousel-btn" id="challenge-btn">チャレンジ参加</button>
             </div>
           </div>
         </div>
@@ -53,4 +53,22 @@
     </div>
   </div>
 
+<script>
+  $(document).ready(function(){
+  
+
+    $('#stats-btn').on('click', function() {
+        location.href = "/mypage";
+    });
+    
+    // $('#stretch-info-btn').on('click', function() {
+    //     location.href = "/mypage/stretchinfo";
+    // });
+
+    $('#challenge-btn').on('click', function() {
+        location.href = "/challenges";
+    });
+
+  });
+</script>
 @stop
