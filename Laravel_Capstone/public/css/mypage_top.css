@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Noto+Sans+KR:wght@900&display=swap');
-
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Noto Sans JP', sans-serif;
+}
 #background_top{
   background-image: url('/img/ui/웨이스탠드/소스/마이페이지/배경사진.png');
   position: absolute;

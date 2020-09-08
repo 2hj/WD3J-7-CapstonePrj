@@ -1,6 +1,39 @@
-@extends('top_nav')
+@extends('headers.top_nav')
 
-@section('main')
+@section('content')
+
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="/js/joinChallenge.js"></script>
+<link rel="stylesheet" href="/css/joinChallenge.css">
+
+<div class="container">
+  <div class="row">
+    @forelse($joins as $join)
+    <div class="col-md-4">
+      <div class="card" style="width: 18rem;">
+        @if($join->challenge_id == 1)
+        <img src="\img\ui\웨이스탠드\소스\챌린지페이지\바른 자세 챌린지 사진.png"  class="card-img-top" alt="...">
+        @elseif($join->challenge_id == 2)
+        <img src="\img\ui\웨이스탠드\소스\챌린지페이지\스트레칭 사진.png"  class="card-img-top" alt="...">
+        @endif
+        <div class="card-body">
+          <h5 class="card-title">{{ $join->challenge->challenge_title }}</h5>
+          <p class="card-text">スタートの日 : {{ $join->join_date }}</p>
+          <p class="card-text">参加機関 : {{ $join->join_term }}日</p>
+          <p class="card-text">参加費 : {{ $join->entry_fee }}円</p>
+
+          <a href="#" class="btn btn-success">詳細を見る</a>
+        </div>
+      </div>
+    </div>
+
+    @empty
+    <h3>参加しているチャレンジがありません。</h3>
+
+
+    @endforelse
+  </div>
+</div>
 
     <table align="center">
         <th id="join_th">참여 번호</th>
@@ -29,6 +62,3 @@
 
 @stop
 
-<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-<script src="/js/joinChallenge.js"></script>
-<link rel="stylesheet" href="/css/joinChallenge.css">

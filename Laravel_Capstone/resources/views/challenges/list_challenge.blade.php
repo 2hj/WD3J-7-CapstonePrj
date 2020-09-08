@@ -24,10 +24,10 @@
                       <h4>正しい姿勢チャレンジは？</h4>
                       <img src="\img\ui\웨이스탠드\소스\챌린지페이지\그래픽기호.png" alt="">
                       <p>
-                      바른 자세 습관을 형성할 수 있는 챌린지입니다. <br>
-                      장기적으로 자세 습관을 바로잡을 수 있어요. <br>
-                      참가비를 지불하면 챌린지 100% 달성 시 보상금이 주어져요! <br>
-                      바른자세도 만들고, 보상금도 받는 거 어때요?
+                      正しい座り方を作ります。<br>
+                      座り方を長期的に改善します。<br>
+                      参加費を支払うと、100％達成したら賞金が得られます！<br>
+                      正しい座り方を作って、賞金をもらいましょう！
                       </p>
                   </div>
               </div>
@@ -38,9 +38,9 @@
                       <h4>チャレンジの方法は？</h4>
                       <img src="\img\ui\웨이스탠드\소스\챌린지페이지\그래픽기호.png" alt="">
                       <p>
-                      매일매일 자동 인증 : "하루 바른자세 60% 이상 유지"<br>
-                      웨이스탠드 방석을 통해 수집한 착석자세분석 데이터를 바탕으로 매일 자동 인증됩니다. <br>
-                      하룻동안 앉은 총 착석시간 중의 60% 이상을 바른자세로 앉아야 인증에 성공합니다.
+                      毎日オート認証：一日の正しい姿勢 - 60％以上<br>
+                      ウエイスタンド座布団から受け取った着席姿勢データに基づいで自動的に認証されます。<br>
+                      一日の正しい姿勢が6割以上の場合成功！
                       </p>
                   </div>
               </div>
@@ -48,9 +48,9 @@
             <div class="col-4 top-div-box-3 challenge-col">
               <div class="challenge-card">
                   <div class="card-body" id="join-info">
-                    <h5>현재 {{ count($challenge_1) }}명 참가 중입니다.</h5>
-                    <h5 id="join-fee">기본 참가비 : {{ $good_challenge->default_entry_fee }}원</h5>
-                    <h5>무료참가 가능</h5>
+                    <h5>現在 {{ count($challenge_1) }}人挑戦中</h5>
+                    <h5 id="join-fee">参加費 : {{ $good_challenge->default_entry_fee }}円</h5>
+                    <h5>無料で参加できる</h5>
                     <button type="button" class="btn join-modal" id="good-join-btn" data-toggle="modal" data-target="#join-modal">チャレンジに参加</button>
                   </div>
               </div>
@@ -71,10 +71,10 @@
                       <h4>正しい姿勢チャレンジは？</h4>
                       <img src="\img\ui\웨이스탠드\소스\챌린지페이지\그래픽기호.png" alt="">
                       <p>
-                      허리건강을 지키기 위해서는 스트레칭이 필수라는 점, 다들 알고계시죠? <br>
-                      스트레칭 이제는 까먹지 마시고 주도적으로, 그리고 재밌게! 하세요. <br>
-                      자투리 시간을 활용해서 틈틈히 게임만 하면 스트레칭까지 완료! <br>
-                      스트레칭 챌린지에 참가해서 재밌게 스트레칭도 하고 보상금도 받는 거 어때요?
+                      腰を守るためにストレッチは必ず必要です。<br>
+                      ストレッチ、これからは忘れないで楽しんでください！<br>
+                      暇な時ゲームだけすればストレッチ完了！<br>
+                      チャレンジに参加してストレッチも楽しんで、賞金ももらいましょう！
                       </p>
                   </div>
               </div>
@@ -85,9 +85,9 @@
                       <h4>チャレンジの方法は？</h4>
                       <img src="\img\ui\웨이스탠드\소스\챌린지페이지\그래픽기호.png" alt="">
                       <p>
-                      게임 플레이 시 자동 인증 : "게임 스코어 1000점 이상"<br>
-                      웨이스탠드 어플의 스트레칭 게임을 플레이 함으로써 챌린지를 수행합니다.<br>
-                      매일 게임 최고 스코어가 1000점 이상이 되어야 인증에 성공합니다.
+                      ゲームプレイでオート認証 : "スコア 1000点以上"<br>
+                      アプリのストレッチゲームをプレイすることでチャレンジを達成します。<br>
+                      毎日ゲームの最高スコアが1000点以上になった場合認証されます。
                       </p>
                   </div>
               </div>
@@ -95,9 +95,9 @@
             <div class="col-4 top-div-box-3 challenge-col">
               <div class="challenge-card">
                   <div class="card-body" id="join-info">
-                    <h5>현재 {{ count($challenge_2) }}명 참가 중입니다.</h5>
-                    <h5 id="join-fee">기본 참가비 : {{ $stretch_challenge->default_entry_fee }}원</h5>
-                    <h5>무료참가 가능</h5>
+                    <h5>現在 {{ count($challenge_2) }}人挑戦中</h5>
+                    <h5 id="join-fee">参加費 : {{ $stretch_challenge->default_entry_fee }}円</h5>
+                    <h5>無料で参加できる</h5>
                     <button type="button" class="btn join-modal" id="stretch-join-btn" data-toggle="modal" data-target="#join-modal">チャレンジに参加</button>
                   </div>
               </div>
@@ -134,48 +134,43 @@
         <form action="" id="join-form" data-challenge-id="">
         {!! csrf_field() !!}
 
-          <div class="right_text">
-            <label for="user_id">참가자</label>
-            <div id="user_id" data-user-id="{{Auth::user()->id}}">{{Auth::user()->user_id}}</div>
-          </div>
-
           <div class="col-10" id="join-form-body">
             <div class="row">
               <div class="col-2">
-                <label for="user_id">참가자</label>
+                <label for="user_id"><p>参加者</p></label>
               </div>
               <div class="col-4">
-                <div id="user_id" data-user-id="{{Auth::user()->id}}">{{Auth::user()->user_id}}</div>
+                <div id="user_id" data-user-id="{{Auth::user()->id}}"><p>{{Auth::user()->user_id}}</p></div>
               </div>
             </div>
 
             <div class="row">
               <div class="col-2">
-                <label for="join-start-date">챌린지 시작 날짜</label>
+                <label for="join-start-date"><p>スタートの日</p></label>
               </div>
               <div class="col-3">
-                <input type="date" name="join-start-date" id="join-start-date" value="{{ old('join-start-date') }}"/>
+                <input type="date" name="join-start-date" id="join-start-date" value='0000-00-00'/>
               </div>
 
               <div class="col-2">
-                <label for="join-end-date">챌린지 종료 날짜</label>
+                <label for="join-end-date"><p>終了の日</p></label>
               </div>
               <div class="col-3">
-                <input type="date" name="join-end-date" id="join-end-date" value="{{ old('join-end-date') }}"/>
+                <input type="date" name="join-end-date" id="join-end-date" value='0000-00-00'/>
               </div>
             </div>
 
             <div class="row">
-              <div class="col-2">참가비 여부</div>
+              <div class="col-2"><p>参加費</p></div>
               <div class="col-3">
                 <input type="radio" name="join-fee" id="pay-join-fee">
-                <label for="pay-join-fee">참가비 지불하고 참가하기</label>
+                <label for="pay-join-fee"><p>参加費を支払って参加する</p></label>
 
                 <div class="col-12" id="set-join-fee"></div>
               </div>
               <div class="col-3">
                 <input type="radio" name="join-fee" id="free-join-fee">
-                <label for="free-join-fee">무료로 참가하기</label>
+                <label for="free-join-fee"><p>無料で参加する</p></label>
               </div>
             </div>
           </div>
@@ -183,7 +178,7 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button type="submit" id="submit-form" class="btn btn-secondary" data-dismiss="modal">참가하기</button>
+        <button type="submit" id="submit-form" class="btn btn-secondary" data-dismiss="modal">参加する</button>
       </div>
     </div>
   </div>
@@ -226,7 +221,7 @@
         join_count++;
 
         if(join_count == 1) {
-            var $label = $('<label for="set-join-fee-input" id="set-join-fee-label">참가비 설정</label>')
+            var $label = $('<label for="set-join-fee-input" id="set-join-fee-label">参加費設定</label>')
             var $input = $('<input type="text" id="set-join-fee-input" name="set-join-fee-input" placeholder="金額を入力"/>');
 
             $('#set-join-fee').append($label);
@@ -254,11 +249,11 @@
         } else if ($('input:radio[id="free-join-fee"]').is(':checked')) {        
             var join_fee = 0;
         } else {
-            alert('참가비 여부를 선택하세요.');
+            alert('参加費を洗濯して下さい。');
         }
         console.log(join_fee);
 
-        if(confirm('챌린지에 도전을 하시겠습니까?')) {
+        if(confirm('チャレンジに挑戦しますか?')) {
             $.ajax({
                 url: '/challenges',
                 type: 'post',

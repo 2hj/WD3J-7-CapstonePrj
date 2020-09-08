@@ -61,7 +61,7 @@
                 </button>
               </div>
               <div class="modal-body">
-                <iframe width="360" height="225" src="https://www.youtube.com/embed/zRaPfQUaSUY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="360" height="225" src="https://www.youtube.com/embed/dMyR08A6rrc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -92,7 +92,7 @@
                 </button>
               </div>
               <div class="modal-body">
-                <iframe width="360" height="225" src="https://www.youtube.com/embed/Io5NYpzfsEU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="360" height="225" src="https://youtu.be/pWaJZOetkz8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Noto+Sans+KR:wght@900&display=swap');
-h1, h2, h3, h4, h5, h6{
+h1, h2, h3, h4, h5, h6, p{
   font-family: 'Noto Sans JP', sans-serif;
 }
 .challenge-list-cont{
@@ -76,4 +76,20 @@ h1, h2, h3, h4, h5, h6{
 }
 .btn.join-modal:hover{
   background-color: #5dffc6;
+}
+.modal-content{
+  padding: 30px 40px;
+}
+.modal-header{
+  display: inline-block;
+}
+.close {
+  float: revert;
+}
+.modal-title{
+  margin: 30px 0;
+  font-weight: 900;
+}
+#modal-header-info{
+  margin: 10px 0;
 }
